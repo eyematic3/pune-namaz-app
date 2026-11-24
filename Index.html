@@ -1,640 +1,640 @@
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta name="theme-color" content="#0f5132" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<title>پونہ نماز ایپ — مدرسہ فرقانیہ ٹرسٹ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0f5132" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>پونہ نماز ایپ — مدرسہ فرقانیہ ٹرسٹ</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet" />
 
-<style>
-:root {
---bg-dark: #072216;
---card-bg: #0f5132;
---card-dark: #093520;
---gold: #c5a059;
---gold-soft: #f6efe0;
---text-main: #f8fafc;
---text-muted: #d1fae5;
-}
+  <style>
+    :root {
+      --bg-dark: #072216;
+      --card-bg: #0f5132;
+      --card-dark: #093520;
+      --gold: #c5a059;
+      --gold-soft: #f6efe0;
+      --text-main: #f8fafc;
+      --text-muted: #d1fae5;
+    }
 
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
--webkit-tap-highlight-color: transparent;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-body {
-font-family: "Noto Naskh Arabic", Inter, system-ui, -apple-system, sans-serif;
-background: radial-gradient(circle at top, #12482f 0%, var(--bg-dark) 75%);
-color: var(--text-main);
-min-height: 100dvh;
-display: flex;
-justify-content: center;
-padding: 14px;
-}
+    body {
+      font-family: "Noto Naskh Arabic", Inter, system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at top, #12482f 0%, var(--bg-dark) 75%);
+      color: var(--text-main);
+      min-height: 100dvh;
+      display: flex;
+      justify-content: center;
+      padding: 14px;
+    }
 
-.app-shell {
-width: 100%;
-max-width: 440px;
-display: flex;
-flex-direction: column;
-gap: 12px;
-padding-bottom: 20px;
-}
+    .app-shell {
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-bottom: 20px;
+    }
 
-.card {
-background: linear-gradient(165deg, var(--card-bg) 0%, var(--card-dark) 100%);
-border: 1.5px solid rgba(197, 160, 89, 0.45);
-border-radius: 22px;
-padding: 16px;
-box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
-}
+    .card {
+      background: linear-gradient(165deg, var(--card-bg) 0%, var(--card-dark) 100%);
+      border: 1.5px solid rgba(197, 160, 89, 0.45);
+      border-radius: 22px;
+      padding: 16px;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+    }
 
-.header {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-gap: 10px;
-}
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
 
-.brand-title {
-font-size: 18px;
-font-weight: 700;
-line-height: 1.35;
-color: #fff;
-}
+    .brand-title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #fff;
+    }
 
-.brand-sub {
-font-size: 12px;
-color: var(--gold-soft);
-opacity: 0.9;
-margin-top: 2px;
-}
+    .brand-sub {
+      font-size: 12px;
+      color: var(--gold-soft);
+      opacity: 0.9;
+      margin-top: 2px;
+    }
 
-.controls {
-display: flex;
-gap: 6px;
-align-items: center;
-}
+    .controls {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
 
-select, button {
-font-family: inherit;
-border-radius: 12px;
-border: 1px solid rgba(197, 160, 89, 0.55);
-background: rgba(255, 255, 255, 0.12);
-color: #fff;
-padding: 7px 11px;
-font-size: 12px;
-font-weight: 600;
-cursor: pointer;
-}
+    select, button {
+      font-family: inherit;
+      border-radius: 12px;
+      border: 1px solid rgba(197, 160, 89, 0.55);
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
 
-select option {
-background: #093520;
-color: #fff;
-}
+    select option {
+      background: #093520;
+      color: #fff;
+    }
 
-.hero-next {
-margin-top: 14px;
-background: rgba(246, 239, 224, 0.12);
-border: 1px solid rgba(197, 160, 89, 0.45);
-border-radius: 16px;
-padding: 14px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 10px;
-}
+    .hero-next {
+      margin-top: 14px;
+      background: rgba(246, 239, 224, 0.12);
+      border: 1px solid rgba(197, 160, 89, 0.45);
+      border-radius: 16px;
+      padding: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
 
-.next-caption {
-font-size: 12px;
-color: var(--gold-soft);
-}
+    .next-caption {
+      font-size: 12px;
+      color: var(--gold-soft);
+    }
 
-.next-name-time {
-font-size: 20px;
-font-weight: 700;
-color: #ffe09e;
-margin-top: 2px;
-}
+    .next-name-time {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffe09e;
+      margin-top: 2px;
+    }
 
-.countdown-badge {
-background: rgba(0, 0, 0, 0.28);
-border: 1px solid rgba(255, 224, 158, 0.35);
-padding: 8px 12px;
-border-radius: 14px;
-text-align: center;
-min-width: 96px;
-}
+    .countdown-badge {
+      background: rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(255, 224, 158, 0.35);
+      padding: 8px 12px;
+      border-radius: 14px;
+      text-align: center;
+      min-width: 96px;
+    }
 
-.countdown-label {
-font-size: 10px;
-color: var(--text-muted);
-display: block;
-}
+    .countdown-label {
+      font-size: 10px;
+      color: var(--text-muted);
+      display: block;
+    }
 
-.countdown-val {
-font-size: 14px;
-font-weight: 700;
-color: #fff;
-direction: ltr;
-display: block;
-margin-top: 2px;
-}
+    .countdown-val {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      direction: ltr;
+      display: block;
+      margin-top: 2px;
+    }
 
-.action-row {
-margin-top: 12px;
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 8px;
-}
+    .action-row {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
 
-.btn-gold {
-background: var(--gold);
-color: #072216;
-border: none;
-font-weight: 700;
-padding: 10px 12px;
-font-size: 13px;
-}
+    .btn-gold {
+      background: var(--gold);
+      color: #072216;
+      border: none;
+      font-weight: 700;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
 
-.btn-outline {
-background: rgba(255, 255, 255, 0.08);
-color: #fff;
-padding: 10px 12px;
-font-size: 13px;
-}
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
 
-.section-top {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 10px;
-}
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
 
-.section-title {
-font-size: 15px;
-font-weight: 700;
-color: var(--gold-soft);
-}
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gold-soft);
+    }
 
-.date-pill {
-font-size: 11px;
-background: rgba(0, 0, 0, 0.25);
-padding: 4px 10px;
-border-radius: 999px;
-color: var(--text-muted);
-}
+    .date-pill {
+      font-size: 11px;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 4px 10px;
+      border-radius: 999px;
+      color: var(--text-muted);
+    }
 
-.prayer-list {
-display: flex;
-flex-direction: column;
-gap: 8px;
-}
+    .prayer-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
 
-.prayer-item {
-background: rgba(0, 0, 0, 0.22);
-border: 1px solid rgba(255, 255, 255, 0.08);
-border-radius: 14px;
-padding: 12px 14px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
+    .prayer-item {
+      background: rgba(0, 0, 0, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.prayer-item.active-next {
-background: rgba(197, 160, 89, 0.22);
-border-color: var(--gold);
-}
+    .prayer-item.active-next {
+      background: rgba(197, 160, 89, 0.22);
+      border-color: var(--gold);
+    }
 
-.prayer-item.jumma-row {
-background: rgba(197, 160, 89, 0.14);
-border-color: rgba(197, 160, 89, 0.45);
-}
+    .prayer-item.jumma-row {
+      background: rgba(197, 160, 89, 0.14);
+      border-color: rgba(197, 160, 89, 0.45);
+    }
 
-.p-left {
-display: flex;
-align-items: center;
-gap: 8px;
-}
+    .p-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-.p-name {
-font-size: 15px;
-font-weight: 700;
-}
+    .p-name {
+      font-size: 15px;
+      font-weight: 700;
+    }
 
-.p-tag {
-font-size: 10px;
-padding: 2px 7px;
-border-radius: 999px;
-background: rgba(255, 224, 158, 0.2);
-color: #ffe09e;
-font-weight: 600;
-}
+    .p-tag {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(255, 224, 158, 0.2);
+      color: #ffe09e;
+      font-weight: 600;
+    }
 
-.p-time {
-font-size: 14px;
-font-weight: 700;
-color: var(--gold-soft);
-direction: ltr;
-}
+    .p-time {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gold-soft);
+      direction: ltr;
+    }
 
-.pref-box {
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
+    .pref-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-.pref-line {
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-size: 13px;
-gap: 10px;
-}
+    .pref-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      gap: 10px;
+    }
 
-.status-note {
-font-size: 11px;
-color: var(--text-muted);
-opacity: 0.85;
-line-height: 1.5;
-}
+    .status-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      opacity: 0.85;
+      line-height: 1.5;
+    }
 
-.toast {
-position: fixed;
-bottom: 18px;
-left: 50%;
-transform: translateX(-50%);
-background: #062919;
-color: #fff;
-border: 1px solid var(--gold);
-padding: 10px 16px;
-border-radius: 14px;
-font-size: 12px;
-font-weight: 600;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-z-index: 999;
-display: none;
-}
-</style>
+    .toast {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #062919;
+      color: #fff;
+      border: 1px solid var(--gold);
+      padding: 10px 16px;
+      border-radius: 14px;
+      font-size: 12px;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-<div class="app-shell" id="appRoot">
-<!-- Top Header & Next Prayer Card -->
-<div class="card">
-<div class="header">
-<div>
-<div class="brand-title" id="appTitle">پونہ نماز ایپ</div>
-<div class="brand-sub" id="appSub">مدرسہ فرقانیہ ٹرسٹ • حنفی</div>
-</div>
-<div class="controls">
-<select id="langSelect" aria-label="Language">
-<option value="ur" selected>اردو</option>
-<option value="en">English</option>
-</select>
-<button id="refreshBtn" type="button" title="Refresh">↻</button>
-</div>
-</div>
+  <div class="app-shell" id="appRoot">
+    <!-- Top Header & Next Prayer Card -->
+    <div class="card">
+      <div class="header">
+        <div>
+          <div class="brand-title" id="appTitle">پونہ نماز ایپ</div>
+          <div class="brand-sub" id="appSub">مدرسہ فرقانیہ ٹرسٹ • حنفی</div>
+        </div>
+        <div class="controls">
+          <select id="langSelect" aria-label="Language">
+            <option value="ur" selected>اردو</option>
+            <option value="en">English</option>
+          </select>
+          <button id="refreshBtn" type="button" title="Refresh">↻</button>
+        </div>
+      </div>
 
-<div class="hero-next">
-<div>
-<div class="next-caption" id="nextCaption">اگلی نماز</div>
-<div class="next-name-time" id="nextPrayerDisplay">--:--</div>
-</div>
-<div class="countdown-badge">
-<span class="countdown-label" id="remLabel">باقی وقت</span>
-<span class="countdown-val" id="countdownVal">--:--</span>
-</div>
-</div>
+      <div class="hero-next">
+        <div>
+          <div class="next-caption" id="nextCaption">اگلی نماز</div>
+          <div class="next-name-time" id="nextPrayerDisplay">--:--</div>
+        </div>
+        <div class="countdown-badge">
+          <span class="countdown-label" id="remLabel">باقی وقت</span>
+          <span class="countdown-val" id="countdownVal">--:--</span>
+        </div>
+      </div>
 
-<div class="action-row">
-<button class="btn-gold" id="notifyBtn" type="button">🔔 Notification On</button>
-<button class="btn-outline" id="soundTestBtn" type="button">🔊 Test Alert</button>
-</div>
-</div>
+      <div class="action-row">
+        <button class="btn-gold" id="notifyBtn" type="button">🔔 Notification On</button>
+        <button class="btn-outline" id="soundTestBtn" type="button">🔊 Test Alert</button>
+      </div>
+    </div>
 
-<!-- Today's Prayer Schedule Card -->
-<div class="card">
-<div class="section-top">
-<div class="section-title" id="scheduleTitle">آج کے اوقات (پونہ)</div>
-<div class="date-pill" id="datePill">Loading...</div>
-</div>
+    <!-- Today's Prayer Schedule Card -->
+    <div class="card">
+      <div class="section-top">
+        <div class="section-title" id="scheduleTitle">آج کے اوقات (پونہ)</div>
+        <div class="date-pill" id="datePill">Loading...</div>
+      </div>
 
-<div class="prayer-list">
-<div class="prayer-item" id="row_fajr">
-<div class="p-left"><span class="p-name" id="lbl_fajr">فجر</span><span class="p-tag hidden-tag" id="tag_fajr"></span></div>
-<span class="p-time" id="val_fajr">--:--</span>
-</div>
-<div class="prayer-item" id="row_dhuhr">
-<div class="p-left"><span class="p-name" id="lbl_dhuhr">ظہر</span><span class="p-tag hidden-tag" id="tag_dhuhr"></span></div>
-<span class="p-time" id="val_dhuhr">--:--</span>
-</div>
-<div class="prayer-item" id="row_asr">
-<div class="p-left"><span class="p-name" id="lbl_asr">عصر</span><span class="p-tag hidden-tag" id="tag_asr"></span></div>
-<span class="p-time" id="val_asr">--:--</span>
-</div>
-<div class="prayer-item" id="row_maghrib">
-<div class="p-left"><span class="p-name" id="lbl_maghrib">مغرب</span><span class="p-tag hidden-tag" id="tag_maghrib"></span></div>
-<span class="p-time" id="val_maghrib">--:--</span>
-</div>
-<div class="prayer-item" id="row_isha">
-<div class="p-left"><span class="p-name" id="lbl_isha">عشاء</span><span class="p-tag hidden-tag" id="tag_isha"></span></div>
-<span class="p-time" id="val_isha">--:--</span>
-</div>
-<div class="prayer-item jumma-row" id="row_jumma">
-<div class="p-left"><span class="p-name" id="lbl_jumma">جمعہ</span></div>
-<span class="p-time">01:45 PM</span>
-</div>
-</div>
-</div>
+      <div class="prayer-list">
+        <div class="prayer-item" id="row_fajr">
+          <div class="p-left"><span class="p-name" id="lbl_fajr">فجر</span><span class="p-tag hidden-tag" id="tag_fajr"></span></div>
+          <span class="p-time" id="val_fajr">--:--</span>
+        </div>
+        <div class="prayer-item" id="row_dhuhr">
+          <div class="p-left"><span class="p-name" id="lbl_dhuhr">ظہر</span><span class="p-tag hidden-tag" id="tag_dhuhr"></span></div>
+          <span class="p-time" id="val_dhuhr">--:--</span>
+        </div>
+        <div class="prayer-item" id="row_asr">
+          <div class="p-left"><span class="p-name" id="lbl_asr">عصر</span><span class="p-tag hidden-tag" id="tag_asr"></span></div>
+          <span class="p-time" id="val_asr">--:--</span>
+        </div>
+        <div class="prayer-item" id="row_maghrib">
+          <div class="p-left"><span class="p-name" id="lbl_maghrib">مغرب</span><span class="p-tag hidden-tag" id="tag_maghrib"></span></div>
+          <span class="p-time" id="val_maghrib">--:--</span>
+        </div>
+        <div class="prayer-item" id="row_isha">
+          <div class="p-left"><span class="p-name" id="lbl_isha">عشاء</span><span class="p-tag hidden-tag" id="tag_isha"></span></div>
+          <span class="p-time" id="val_isha">--:--</span>
+        </div>
+        <div class="prayer-item jumma-row" id="row_jumma">
+          <div class="p-left"><span class="p-name" id="lbl_jumma">جمعہ</span></div>
+          <span class="p-time">01:45 PM</span>
+        </div>
+      </div>
+    </div>
 
-<!-- Reminder Settings Card -->
-<div class="card pref-box">
-<div class="pref-line">
-<span id="preLabel">نماز سے پہلے یاد دہانی</span>
-<select id="preMinutesSelect" aria-label="Reminder lead time">
-<option value="0" selected>Exact Time (0 min)</option>
-<option value="10">10 min pehle</option>
-<option value="15">15 min pehle</option>
-</select>
-</div>
-<div class="status-note" id="statusFoot">
-پونہ (حنفی) اوقات خودکار اپڈیٹ ہوتے ہیں۔ ہوم اسکرین پر ایپ آئیکن بنانے کے لیے براؤزر مینو سے "Add to Home screen" چنیں۔
-</div>
-</div>
-</div>
+    <!-- Reminder Settings Card -->
+    <div class="card pref-box">
+      <div class="pref-line">
+        <span id="preLabel">نماز سے پہلے یاد دہانی</span>
+        <select id="preMinutesSelect" aria-label="Reminder lead time">
+          <option value="0" selected>Exact Time (0 min)</option>
+          <option value="10">10 min pehle</option>
+          <option value="15">15 min pehle</option>
+        </select>
+      </div>
+      <div class="status-note" id="statusFoot">
+        پونہ (حنفی) اوقات خودکار اپڈیٹ ہوتے ہیں۔ ہوم اسکرین پر ایپ آئیکن بنانے کے لیے براؤزر مینو سے "Add to Home screen" چنیں۔
+      </div>
+    </div>
+  </div>
 
-<div class="toast" id="toastBox"></div>
+  <div class="toast" id="toastBox"></div>
 
-<script>
-(function () {
-const I18N = {
-ur: {
-dir: 'rtl',
-appTitle: 'پونہ نماز ایپ',
-appSub: 'مدرسہ فرقانیہ ٹرسٹ • حنفی',
-nextCaption: 'اگلی نماز',
-remLabel: 'باقی وقت',
-scheduleTitle: 'آج کے اوقات (پونہ)',
-preLabel: 'نماز سے پہلے یاد دہانی',
-notifyOn: '🔔 نوٹیفکیشن آن',
-notifyActive: '🔔 نوٹیفکیشن فعال',
-soundTest: '🔊 ٹیسٹ الرٹ',
-nextBadge: 'اگلی',
-statusFoot: 'پونہ (حنفی) اوقات خودکار اپڈیٹ ہوتے ہیں۔ ہوم اسکرین پر ایپ آئیکن بنانے کے لیے براؤزر مینو سے "Add to Home screen" چنیں۔',
-fajr: 'فجر', dhuhr: 'ظہر', asr: 'عصر', maghrib: 'مغرب', isha: 'عشاء', jumma: 'جمعہ',
-alertTitle: 'نماز کا وقت',
-preTitle: 'نماز کا یاد دہانی الرٹ',
-testMsg: 'ٹیسٹ الرٹ فعال ہے — پونہ نماز ایپ'
-},
-en: {
-dir: 'ltr',
-appTitle: 'Pune Namaz App',
-appSub: 'Madrasa Furqania Trust • Hanafi',
-nextCaption: 'Next Prayer',
-remLabel: 'Time Left',
-scheduleTitle: "Today's Timings (Pune)",
-preLabel: 'Pre-Prayer Reminder',
-notifyOn: '🔔 Notification On',
-notifyActive: '🔔 Alerts Active',
-soundTest: '🔊 Test Alert',
-nextBadge: 'NEXT',
-statusFoot: 'Pune (Hanafi) timings auto-sync online. Use browser menu "Add to Home screen" to pin as an app icon.',
-fajr: 'Fajr', dhuhr: 'Zuhr', asr: 'Asr', maghrib: 'Maghrib', isha: 'Isha', jumma: "Jumu'ah",
-alertTitle: 'Namaz Time — Pune',
-preTitle: 'Namaz Reminder — Pune',
-testMsg: 'Test alert triggered — Pune Namaz App'
-}
-};
+  <script>
+    (function () {
+      const I18N = {
+        ur: {
+          dir: 'rtl',
+          appTitle: 'پونہ نماز ایپ',
+          appSub: 'مدرسہ فرقانیہ ٹرسٹ • حنفی',
+          nextCaption: 'اگلی نماز',
+          remLabel: 'باقی وقت',
+          scheduleTitle: 'آج کے اوقات (پونہ)',
+          preLabel: 'نماز سے پہلے یاد دہانی',
+          notifyOn: '🔔 نوٹیفکیشن آن',
+          notifyActive: '🔔 نوٹیفکیشن فعال',
+          soundTest: '🔊 ٹیسٹ الرٹ',
+          nextBadge: 'اگلی',
+          statusFoot: 'پونہ (حنفی) اوقات خودکار اپڈیٹ ہوتے ہیں۔ ہوم اسکرین پر ایپ آئیکن بنانے کے لیے براؤزر مینو سے "Add to Home screen" چنیں۔',
+          fajr: 'فجر', dhuhr: 'ظہر', asr: 'عصر', maghrib: 'مغرب', isha: 'عشاء', jumma: 'جمعہ',
+          alertTitle: 'نماز کا وقت',
+          preTitle: 'نماز کا یاد دہانی الرٹ',
+          testMsg: 'ٹیسٹ الرٹ فعال ہے — پونہ نماز ایپ'
+        },
+        en: {
+          dir: 'ltr',
+          appTitle: 'Pune Namaz App',
+          appSub: 'Madrasa Furqania Trust • Hanafi',
+          nextCaption: 'Next Prayer',
+          remLabel: 'Time Left',
+          scheduleTitle: "Today's Timings (Pune)",
+          preLabel: 'Pre-Prayer Reminder',
+          notifyOn: '🔔 Notification On',
+          notifyActive: '🔔 Alerts Active',
+          soundTest: '🔊 Test Alert',
+          nextBadge: 'NEXT',
+          statusFoot: 'Pune (Hanafi) timings auto-sync online. Use browser menu "Add to Home screen" to pin as an app icon.',
+          fajr: 'Fajr', dhuhr: 'Zuhr', asr: 'Asr', maghrib: 'Maghrib', isha: 'Isha', jumma: "Jumu'ah",
+          alertTitle: 'Namaz Time — Pune',
+          preTitle: 'Namaz Reminder — Pune',
+          testMsg: 'Test alert triggered — Pune Namaz App'
+        }
+      };
 
-let lang = 'ur';
-let preMin = 0;
-let prayers = [];
-const firedKeys = new Set();
+      let lang = 'ur';
+      let preMin = 0;
+      let prayers = [];
+      const firedKeys = new Set();
 
-const langSelect = document.getElementById('langSelect');
-const preSelect = document.getElementById('preMinutesSelect');
-const notifyBtn = document.getElementById('notifyBtn');
-const soundTestBtn = document.getElementById('soundTestBtn');
-const refreshBtn = document.getElementById('refreshBtn');
+      const langSelect = document.getElementById('langSelect');
+      const preSelect = document.getElementById('preMinutesSelect');
+      const notifyBtn = document.getElementById('notifyBtn');
+      const soundTestBtn = document.getElementById('soundTestBtn');
+      const refreshBtn = document.getElementById('refreshBtn');
 
-function showToast(msg) {
-const box = document.getElementById('toastBox');
-box.textContent = msg;
-box.style.display = 'block';
-clearTimeout(showToast._t);
-showToast._t = setTimeout(() => { box.style.display = 'none'; }, 2600);
-}
+      function showToast(msg) {
+        const box = document.getElementById('toastBox');
+        box.textContent = msg;
+        box.style.display = 'block';
+        clearTimeout(showToast._t);
+        showToast._t = setTimeout(() => { box.style.display = 'none'; }, 2600);
+      }
 
-function playChime() {
-try {
-const AudioCtx = window.AudioContext || window.webkitAudioContext;
-if (!AudioCtx) return;
-const ctx = new AudioCtx();
-const osc = ctx.createOscillator();
-const gain = ctx.createGain();
-osc.type = 'sine';
-osc.frequency.setValueAtTime(528, ctx.currentTime);
-gain.gain.setValueAtTime(0.08, ctx.currentTime);
-gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.1);
-osc.connect(gain);
-gain.connect(ctx.destination);
-osc.start();
-osc.stop(ctx.currentTime + 1.1);
-} catch (e) {}
-}
+      function playChime() {
+        try {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (!AudioCtx) return;
+          const ctx = new AudioCtx();
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(528, ctx.currentTime);
+          gain.gain.setValueAtTime(0.08, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.1);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + 1.1);
+        } catch (e) {}
+      }
 
-function to12h(t24) {
-if (!t24) return '--:--';
-const parts = t24.split(' ')[0].split(':');
-let h = parseInt(parts[0], 10);
-const m = parts[1];
-const ampm = h >= 12 ? 'PM' : 'AM';
-h = h % 12 || 12;
-return String(h).padStart(2, '0') + ':' + m + ' ' + ampm;
-}
+      function to12h(t24) {
+        if (!t24) return '--:--';
+        const parts = t24.split(' ')[0].split(':');
+        let h = parseInt(parts[0], 10);
+        const m = parts[1];
+        const ampm = h >= 12 ? 'PM' : 'AM';
+        h = h % 12 || 12;
+        return String(h).padStart(2, '0') + ':' + m + ' ' + ampm;
+      }
 
-function toMins(t24) {
-if (!t24) return null;
-const parts = t24.split(' ')[0].split(':');
-return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
-}
+      function toMins(t24) {
+        if (!t24) return null;
+        const parts = t24.split(' ')[0].split(':');
+        return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+      }
 
-function applyLanguage() {
-const t = I18N[lang];
-document.getElementById('appRoot').setAttribute('dir', t.dir);
-document.getElementById('appTitle').textContent = t.appTitle;
-document.getElementById('appSub').textContent = t.appSub;
-document.getElementById('nextCaption').textContent = t.nextCaption;
-document.getElementById('remLabel').textContent = t.remLabel;
-document.getElementById('scheduleTitle').textContent = t.scheduleTitle;
-document.getElementById('preLabel').textContent = t.preLabel;
-document.getElementById('soundTestBtn').textContent = t.soundTest;
-document.getElementById('statusFoot').textContent = t.statusFoot;
-document.getElementById('lbl_fajr').textContent = t.fajr;
-document.getElementById('lbl_dhuhr').textContent = t.dhuhr;
-document.getElementById('lbl_asr').textContent = t.asr;
-document.getElementById('lbl_maghrib').textContent = t.maghrib;
-document.getElementById('lbl_isha').textContent = t.isha;
-document.getElementById('lbl_jumma').textContent = t.jumma;
+      function applyLanguage() {
+        const t = I18N[lang];
+        document.getElementById('appRoot').setAttribute('dir', t.dir);
+        document.getElementById('appTitle').textContent = t.appTitle;
+        document.getElementById('appSub').textContent = t.appSub;
+        document.getElementById('nextCaption').textContent = t.nextCaption;
+        document.getElementById('remLabel').textContent = t.remLabel;
+        document.getElementById('scheduleTitle').textContent = t.scheduleTitle;
+        document.getElementById('preLabel').textContent = t.preLabel;
+        document.getElementById('soundTestBtn').textContent = t.soundTest;
+        document.getElementById('statusFoot').textContent = t.statusFoot;
+        document.getElementById('lbl_fajr').textContent = t.fajr;
+        document.getElementById('lbl_dhuhr').textContent = t.dhuhr;
+        document.getElementById('lbl_asr').textContent = t.asr;
+        document.getElementById('lbl_maghrib').textContent = t.maghrib;
+        document.getElementById('lbl_isha').textContent = t.isha;
+        document.getElementById('lbl_jumma').textContent = t.jumma;
 
-const granted = ('Notification' in window && Notification.permission === 'granted');
-notifyBtn.textContent = granted ? t.notifyActive : t.notifyOn;
-tick();
-}
+        const granted = ('Notification' in window && Notification.permission === 'granted');
+        notifyBtn.textContent = granted ? t.notifyActive : t.notifyOn;
+        tick();
+      }
 
-function sendAlert(title, body) {
-playChime();
-showToast(body);
-if ('Notification' in window && Notification.permission === 'granted') {
-try {
-new Notification(title, { body });
-} catch (e) {}
-}
-}
+      function sendAlert(title, body) {
+        playChime();
+        showToast(body);
+        if ('Notification' in window && Notification.permission === 'granted') {
+          try {
+            new Notification(title, { body });
+          } catch (e) {}
+        }
+      }
 
-function tick() {
-const now = new Date();
-document.getElementById('datePill').textContent = now.toLocaleDateString(
-lang === 'ur' ? 'ur-PK' : 'en-IN',
-{ weekday: 'short', day: 'numeric', month: 'short' }
-);
+      function tick() {
+        const now = new Date();
+        document.getElementById('datePill').textContent = now.toLocaleDateString(
+          lang === 'ur' ? 'ur-PK' : 'en-IN',
+          { weekday: 'short', day: 'numeric', month: 'short' }
+        );
 
-const nowMins = now.getHours() * 60 + now.getMinutes();
-let nextPrayer = null;
+        const nowMins = now.getHours() * 60 + now.getMinutes();
+        let nextPrayer = null;
 
-for (const p of prayers) {
-if (p.mins !== null && p.mins > nowMins) {
-nextPrayer = p;
-break;
-}
-}
-if (!nextPrayer && prayers.length) {
-nextPrayer = prayers[0];
-}
+        for (const p of prayers) {
+          if (p.mins !== null && p.mins > nowMins) {
+            nextPrayer = p;
+            break;
+          }
+        }
+        if (!nextPrayer && prayers.length) {
+          nextPrayer = prayers[0];
+        }
 
-document.querySelectorAll('.prayer-item').forEach((el) => el.classList.remove('active-next'));
-document.querySelectorAll('.p-tag').forEach((el) => { el.textContent = ''; });
+        document.querySelectorAll('.prayer-item').forEach((el) => el.classList.remove('active-next'));
+        document.querySelectorAll('.p-tag').forEach((el) => { el.textContent = ''; });
 
-if (nextPrayer) {
-const t = I18N[lang];
-const pName = t[nextPrayer.key] || nextPrayer.key;
-document.getElementById('nextPrayerDisplay').textContent = pName + ' • ' + nextPrayer.str12;
+        if (nextPrayer) {
+          const t = I18N[lang];
+          const pName = t[nextPrayer.key] || nextPrayer.key;
+          document.getElementById('nextPrayerDisplay').textContent = pName + ' • ' + nextPrayer.str12;
 
-const rowEl = document.getElementById('row_' + nextPrayer.key);
-const tagEl = document.getElementById('tag_' + nextPrayer.key);
-if (rowEl) rowEl.classList.add('active-next');
-if (tagEl) tagEl.textContent = t.nextBadge;
+          const rowEl = document.getElementById('row_' + nextPrayer.key);
+          const tagEl = document.getElementById('tag_' + nextPrayer.key);
+          if (rowEl) rowEl.classList.add('active-next');
+          if (tagEl) tagEl.textContent = t.nextBadge;
 
-let diffMins = nextPrayer.mins - nowMins;
-if (diffMins < 0) diffMins += 24 * 60;
-const hrs = Math.floor(diffMins / 60);
-const mins = diffMins % 60;
-document.getElementById('countdownVal').textContent =
-(hrs > 0 ? hrs + 'h ' : '') + mins + 'm';
-}
+          let diffMins = nextPrayer.mins - nowMins;
+          if (diffMins < 0) diffMins += 24 * 60;
+          const hrs = Math.floor(diffMins / 60);
+          const mins = diffMins % 60;
+          document.getElementById('countdownVal').textContent =
+            (hrs > 0 ? hrs + 'h ' : '') + mins + 'm';
+        }
 
-const t = I18N[lang];
-for (const p of prayers) {
-if (p.mins === null) continue;
-const pName = t[p.key] || p.key;
+        const t = I18N[lang];
+        for (const p of prayers) {
+          if (p.mins === null) continue;
+          const pName = t[p.key] || p.key;
 
-if (preMin > 0) {
-const preTarget = p.mins - preMin;
-const preKey = now.toDateString() + 'pre' + preMin + '_' + p.key;
-if (nowMins === preTarget && !firedKeys.has(preKey)) {
-firedKeys.add(preKey);
-sendAlert(t.preTitle, pName + ' — ' + preMin + ' min (' + p.str12 + ')');
-}
-}
+          if (preMin > 0) {
+            const preTarget = p.mins - preMin;
+            const preKey = now.toDateString() + '_pre_' + preMin + '_' + p.key;
+            if (nowMins === preTarget && !firedKeys.has(preKey)) {
+              firedKeys.add(preKey);
+              sendAlert(t.preTitle, pName + ' — ' + preMin + ' min (' + p.str12 + ')');
+            }
+          }
 
-const exactKey = now.toDateString() + 'exact' + p.key;
-if (nowMins === p.mins && !firedKeys.has(exactKey)) {
-firedKeys.add(exactKey);
-sendAlert(t.alertTitle, pName + ' (' + p.str12 + ')');
-}
-}
-}
+          const exactKey = now.toDateString() + '_exact_' + p.key;
+          if (nowMins === p.mins && !firedKeys.has(exactKey)) {
+            firedKeys.add(exactKey);
+            sendAlert(t.alertTitle, pName + ' (' + p.str12 + ')');
+          }
+        }
+      }
 
-function fetchTimings() {
-fetch('https://api.aladhan.com/v1/timingsByCity?city=Pune&country=India&method=1&school=1')
-.then((r) => r.json())
-.then((res) => {
-if (!res || !res.data || !res.data.timings) return;
-const tm = res.data.timings;
-const items = [
-{ key: 'fajr', valId: 'val_fajr', raw: tm.Fajr },
-{ key: 'dhuhr', valId: 'val_dhuhr', raw: tm.Dhuhr },
-{ key: 'asr', valId: 'val_asr', raw: tm.Asr },
-{ key: 'maghrib', valId: 'val_maghrib', raw: tm.Maghrib },
-{ key: 'isha', valId: 'val_isha', raw: tm.Isha }
- ];
-prayers = items.map((item) => {
-const s12 = to12h(item.raw);
-document.getElementById(item.valId).textContent = s12;
-return { key: item.key, mins: toMins(item.raw), str12: s12 };
-});
-tick();
-})
-.catch(() => tick());
-}
+      function fetchTimings() {
+        fetch('https://api.aladhan.com/v1/timingsByCity?city=Pune&country=India&method=1&school=1')
+          .then((r) => r.json())
+          .then((res) => {
+            if (!res || !res.data || !res.data.timings) return;
+            const tm = res.data.timings;
+            const items = [
+              { key: 'fajr', valId: 'val_fajr', raw: tm.Fajr },
+              { key: 'dhuhr', valId: 'val_dhuhr', raw: tm.Dhuhr },
+              { key: 'asr', valId: 'val_asr', raw: tm.Asr },
+              { key: 'maghrib', valId: 'val_maghrib', raw: tm.Maghrib },
+              { key: 'isha', valId: 'val_isha', raw: tm.Isha }
+            ];
+            prayers = items.map((item) => {
+              const s12 = to12h(item.raw);
+              document.getElementById(item.valId).textContent = s12;
+              return { key: item.key, mins: toMins(item.raw), str12: s12 };
+            });
+            tick();
+          })
+          .catch(() => tick());
+      }
 
-// Dynamic Web App Manifest for Add-to-Home-Screen App Icon
-try {
-const manifest = {
-name: 'Pune Namaz App — Madrasa Furqania Trust',
-short_name: 'Pune Namaz',
-start_url: './',
-display: 'standalone',
-background_color: '#072216',
-theme_color: '#0f5132'
-};
-const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
-const link = document.createElement('link');
-link.rel = 'manifest';
-link.href = URL.createObjectURL(blob);
-document.head.appendChild(link);
-} catch (e) {}
+      // Dynamic Web App Manifest for Add-to-Home-Screen App Icon
+      try {
+        const manifest = {
+          name: 'Pune Namaz App — Madrasa Furqania Trust',
+          short_name: 'Pune Namaz',
+          start_url: './',
+          display: 'standalone',
+          background_color: '#072216',
+          theme_color: '#0f5132'
+        };
+        const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+        const link = document.createElement('link');
+        link.rel = 'manifest';
+        link.href = URL.createObjectURL(blob);
+        document.head.appendChild(link);
+      } catch (e) {}
 
-langSelect.addEventListener('change', (e) => {
-lang = e.target.value;
-applyLanguage();
-});
+      langSelect.addEventListener('change', (e) => {
+        lang = e.target.value;
+        applyLanguage();
+      });
 
-preSelect.addEventListener('change', (e) => {
-preMin = parseInt(e.target.value, 10) || 0;
-showToast('Reminder: ' + (preMin > 0 ? preMin + ' min pehle' : 'Exact time'));
-});
+      preSelect.addEventListener('change', (e) => {
+        preMin = parseInt(e.target.value, 10) || 0;
+        showToast('Reminder: ' + (preMin > 0 ? preMin + ' min pehle' : 'Exact time'));
+      });
 
-notifyBtn.addEventListener('click', () => {
-if (!('Notification' in window)) {
-showToast('Browser notification supported nahi hai');
-return;
-}
-Notification.requestPermission().then(() => applyLanguage());
-});
+      notifyBtn.addEventListener('click', () => {
+        if (!('Notification' in window)) {
+          showToast('Browser notification supported nahi hai');
+          return;
+        }
+        Notification.requestPermission().then(() => applyLanguage());
+      });
 
-soundTestBtn.addEventListener('click', () => {
-sendAlert(I18N[lang].alertTitle, I18N[lang].testMsg);
-});
+      soundTestBtn.addEventListener('click', () => {
+        sendAlert(I18N[lang].alertTitle, I18N[lang].testMsg);
+      });
 
-refreshBtn.addEventListener('click', () => {
-fetchTimings();
-showToast('Timings updated');
-});
+      refreshBtn.addEventListener('click', () => {
+        fetchTimings();
+        showToast('Timings updated');
+      });
 
-applyLanguage();
-fetchTimings();
-setInterval(tick, 15000);
-setInterval(fetchTimings, 6 * 60 * 60 * 1000);
-})();
-</script>
+      applyLanguage();
+      fetchTimings();
+      setInterval(tick, 15000);
+      setInterval(fetchTimings, 6 * 60 * 60 * 1000);
+    })();
+  </script>
 </body>
 </html>
